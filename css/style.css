@@ -512,7 +512,7 @@ figure.highlight {
 }
 figure.highlight figcaption {
   color: #999;
-  font-family: Monaco, Menlo, Consolas, Courier New, monospace;
+  font-family: "Nanum Gothic Coding", "NanumSquareRound", Consolas, monospace;
   margin-bottom: 5px;
   text-shadow: 0 0 1px #fff;
 }

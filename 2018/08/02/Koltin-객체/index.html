@@ -13,6 +13,9 @@
     
 
     
+        <meta name="description" content="[Kotlin] 객체.: 서로 연관 있는 변수 들을 묶어 놓는 데이터 덩어리.
+1234567891011package ex_objectfun main(args:Array&amp;lt;String&amp;gt;)&amp;#123;    val person = object &amp;#123;      "/>
+    
 
     <!--Author-->
     
@@ -21,10 +24,13 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="frist-post"/>
+        <meta property="og:title" content="[Koltin] 객체 "/>
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="[Kotlin] 객체.: 서로 연관 있는 변수 들을 묶어 놓는 데이터 덩어리.
+1234567891011package ex_objectfun main(args:Array&amp;lt;String&amp;gt;)&amp;#123;    val person = object &amp;#123;      "/>
     
 
     <!--Open Graph Site Name-->
@@ -51,7 +57,7 @@
 
     <!-- Title -->
     
-    <title>frist-post - One_Lab</title>
+    <title>[Koltin] 객체  - One_Lab</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -167,13 +173,13 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>frist-post</h1>
+                    <h1>[Koltin] 객체 </h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
                         
-                            2018-07-24
+                            2018-08-02
                         
                     </span>
                 </div>
@@ -189,27 +195,24 @@
 
             <!-- Tags and categories -->
            
-                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
-                    
-                        
-
-
-<a href="/tags/tags/">#tags</a>
-
-
-                    
-                </div>
-                <div class="col-lg-4 col-md-5 post-categories">
-                    
-                </div>
-            
 
             <!-- Gallery -->
             
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                
+                <h4 id="Kotlin-객체"><a href="#Kotlin-객체" class="headerlink" title="[Kotlin] 객체."></a>[Kotlin] 객체.</h4><p>: 서로 연관 있는 변수 들을 묶어 놓는 데이터 덩어리.</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> ex_object</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args:<span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span>&#123;</span><br><span class="line">    <span class="keyword">val</span> person = <span class="keyword">object</span> &#123;</span><br><span class="line">        <span class="keyword">val</span> name:String = <span class="string">"홍길동"</span></span><br><span class="line">        <span class="keyword">val</span> age :<span class="built_in">Int</span> = <span class="number">23</span></span><br><span class="line">    &#125;</span><br><span class="line">    println(person.name)</span><br><span class="line">    println(person.age)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>Koltin에서 Property_속성 (name,age)</p>
+<p>-&gt; 선언과 동시에 초기화해야한다.</p>
+</li>
+</ul>
+<p>#자바의 Field   &amp;  코틀린의 Property</p>
+<p>자바는 객체 지향형 프로그램이기에 데이터 자체는 외부에서 접근할 수 없도록 private 접근 제어자로 설정하고 public 으로 메소드만 공개하고 이 중 유효한 값들을 데이터로 저장한다. private로 설정한 속성이 자바의 Field 이다. 이러한 Field 와 Setter(값을 설정), Getter(값 가져오기)를 합친 개념이<br>코틀린의 Property다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span>  String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">setName</span><span class="params">(String name)</span></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name= n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> name;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.age= age;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">setName</span><span class="params">(String n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> age;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>참고 서적 :  초보자를 위한 Koltin 200제.</p>
+
 
                 
             </div>
