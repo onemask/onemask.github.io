@@ -13,9 +13,10 @@
     
 
     
-        <meta name="description" content="[Back_2750]수 정렬하기.나와라 아무거나 나와라 나와나ㅗㄴ왈ㄴㅁ일모닝ㄹ
+        <meta name="description" content="[Back_2750]수 정렬하기.
 보자마자 어떻게 짜야할지는 감이 왔다. Java를 사용하는 나로써는 Test_case만큼 입력받고해당 크기에 해당하는 배열을 만들어서 오름차순으로 정렬하고자 했다.
-그래서 작성한 코드는 아래"/>
+그래서 작성한 코드는 아래와 같다.
+1234567891011121314"/>
     
 
     <!--Author-->
@@ -30,9 +31,10 @@
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="[Back_2750]수 정렬하기.나와라 아무거나 나와라 나와나ㅗㄴ왈ㄴㅁ일모닝ㄹ
+        <meta property="og:description" content="[Back_2750]수 정렬하기.
 보자마자 어떻게 짜야할지는 감이 왔다. Java를 사용하는 나로써는 Test_case만큼 입력받고해당 크기에 해당하는 배열을 만들어서 오름차순으로 정렬하고자 했다.
-그래서 작성한 코드는 아래"/>
+그래서 작성한 코드는 아래와 같다.
+1234567891011121314"/>
     
 
     <!--Open Graph Site Name-->
@@ -73,10 +75,17 @@
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
 
     <!-- Soo Custom Fonts -->
-    <link rel="stylesheet" type="text/css" href="">
+    // <link rel="stylesheet" href="/style.css" type="text/css">
+    <link rel="stylesheet" href="/style.css">
+    
+    // <link rel="stylesheet" href="/style.css" type="text/css">
+    // <link rel="stylesheet" href="/screen.css" type="text/css">
+    <link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/screen.css">
+
+    <!--페이지가 로딩될때 해당 css 로드    -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
-    <link rel="stylesheet" href="/css/style.css">
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -120,7 +129,7 @@
             <ul class="nav navbar-nav navbar-right">
                 
                     <li>
-                        <a href="/">
+                        <a href="https://onemask.github.io/">
                             
                                 Home
                             
@@ -219,7 +228,7 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h2 id="Back-2750-수-정렬하기"><a href="#Back-2750-수-정렬하기" class="headerlink" title="[Back_2750]수 정렬하기."></a>[Back_2750]수 정렬하기.</h2><p>나와라 아무거나 나와라 나와나ㅗㄴ왈ㄴㅁ일모닝ㄹ<br><img src="Z:\TEMP\1533196660554.png" alt="1533196660554"></p>
+                <h2 id="Back-2750-수-정렬하기"><a href="#Back-2750-수-정렬하기" class="headerlink" title="[Back_2750]수 정렬하기."></a>[Back_2750]수 정렬하기.</h2><p><img src="Z:\TEMP\1533196660554.png" alt="1533196660554"></p>
 <p>보자마자 어떻게 짜야할지는 감이 왔다. Java를 사용하는 나로써는 Test_case만큼 입력받고<br>해당 크기에 해당하는 배열을 만들어서 오름차순으로 정렬하고자 했다.</p>
 <p>그래서 작성한 코드는 아래와 같다.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">public class Back_2750 &#123;</span><br><span class="line">    public static void main(String[]args)&#123;</span><br><span class="line"></span><br><span class="line">        Scanner sc = new Scanner(System.in);</span><br><span class="line">        int caseNum = sc.nextInt();</span><br><span class="line">        int[] array = new int[caseNum];</span><br><span class="line"></span><br><span class="line">        for (int i=0;i&lt;caseNum;i++)</span><br><span class="line">            array[i]=sc.nextInt();</span><br><span class="line"></span><br><span class="line">        solution(array);</span><br><span class="line"></span><br><span class="line">        for (int i=0;i&lt;array.length;i++)</span><br><span class="line">            System.out.println(array[i]);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private static void solution(int[] array) &#123;</span><br><span class="line"></span><br><span class="line">        for (int i=0;i&lt;array.length;i++)&#123;</span><br><span class="line">            for(int j=i;j&lt;array.length;j++) &#123;</span><br><span class="line">                if (array[i] &gt; array[j]) &#123;</span><br><span class="line">                    int temp = array[i];</span><br><span class="line">                    array[i] = array[j];</span><br><span class="line">                    array[j] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
