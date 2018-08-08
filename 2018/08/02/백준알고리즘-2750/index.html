@@ -13,9 +13,9 @@
     
 
     
-        <meta name="description" content="[Back_2750]수 정렬하기.보자마자 어떻게 짜야할지는 감이 왔다. Java를 사용하는 나로써는 Test_case만큼 입력받고해당 크기에 해당하는 배열을 만들어서 오름차순으로 정렬하고자 했다.
-그래서 작성한 코드는 아래와 같다.
-12345678910111213141">
+        <meta name="description" content="[Back_2750]수 정렬하기.
+알고리즘 분류로 2750 문제를 보면  삽입 정렬과 버블정렬 2가지 방식으로 풀기를 권하고 있다. 
+보자마자 어떻게 짜야할지는 감이 왔다. Java를 사용하는 나로써는 Test_case만큼 입력받고해당 크기에 해당하는 배열을 만들어서 ">
     
 
     <!--Author-->
@@ -25,14 +25,14 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="[알고리즘]백준알고리즘_2750">
+        <meta property="og:title" content="[Java]백준알고리즘_2750_수 정렬하기">
     
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="[Back_2750]수 정렬하기.보자마자 어떻게 짜야할지는 감이 왔다. Java를 사용하는 나로써는 Test_case만큼 입력받고해당 크기에 해당하는 배열을 만들어서 오름차순으로 정렬하고자 했다.
-그래서 작성한 코드는 아래와 같다.
-12345678910111213141">
+        <meta property="og:description" content="[Back_2750]수 정렬하기.
+알고리즘 분류로 2750 문제를 보면  삽입 정렬과 버블정렬 2가지 방식으로 풀기를 권하고 있다. 
+보자마자 어떻게 짜야할지는 감이 왔다. Java를 사용하는 나로써는 Test_case만큼 입력받고해당 크기에 해당하는 배열을 만들어서 ">
     
 
     <!--Open Graph Site Name-->
@@ -63,7 +63,7 @@
 
     <!-- Title -->
     
-    <title>[알고리즘]백준알고리즘_2750 - One_Lab</title>
+    <title>[Java]백준알고리즘_2750_수 정렬하기 - One_Lab</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -186,7 +186,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>[알고리즘]백준알고리즘_2750</h1>
+                    <h1>[Java]백준알고리즘_2750_수 정렬하기</h1>
                     
                     <h2 class="post-subheading">
                         Sorting
@@ -218,11 +218,44 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h2 id="Back-2750-수-정렬하기"><a href="#Back-2750-수-정렬하기" class="headerlink" title="[Back_2750]수 정렬하기."></a>[Back_2750]수 정렬하기.</h2><p>보자마자 어떻게 짜야할지는 감이 왔다. Java를 사용하는 나로써는 Test_case만큼 입력받고<br>해당 크기에 해당하는 배열을 만들어서 오름차순으로 정렬하고자 했다.</p>
-<p>그래서 작성한 코드는 아래와 같다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">public class Back_2750 &#123;</span><br><span class="line">    public static void main(String[]args)&#123;</span><br><span class="line"></span><br><span class="line">        Scanner sc = new Scanner(System.in);</span><br><span class="line">        int caseNum = sc.nextInt();</span><br><span class="line">        int[] array = new int[caseNum];</span><br><span class="line"></span><br><span class="line">        for (int i=0;i&lt;caseNum;i++)</span><br><span class="line">            array[i]=sc.nextInt();</span><br><span class="line"></span><br><span class="line">        solution(array);</span><br><span class="line"></span><br><span class="line">        for (int i=0;i&lt;array.length;i++)</span><br><span class="line">            System.out.println(array[i]);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private static void solution(int[] array) &#123;</span><br><span class="line"></span><br><span class="line">        for (int i=0;i&lt;array.length;i++)&#123;</span><br><span class="line">            for(int j=i;j&lt;array.length;j++) &#123;</span><br><span class="line">                if (array[i] &gt; array[j]) &#123;</span><br><span class="line">                    int temp = array[i];</span><br><span class="line">                    array[i] = array[j];</span><br><span class="line">                    array[j] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>뭔가 복잡도에서 맘에 걸리긴한데.. 그냥 이렇게 했다.</p>
-<p>그러나 문제는 위와 똑같은 문제에서 발생했다.</p>
+                <h2 id="Back-2750-수-정렬하기"><a href="#Back-2750-수-정렬하기" class="headerlink" title="[Back_2750]수 정렬하기."></a>[Back_2750]수 정렬하기.</h2><ul>
+<li>알고리즘 분류로 2750 문제를 보면  삽입 정렬과 버블정렬 2가지 방식으로 풀기를 권하고 있다. </li>
+<li>보자마자 어떻게 짜야할지는 감이 왔다. Java를 사용하는 나로써는 Test_case만큼 입력받고해당 크기에 해당하는 배열을 만들어서 오름차순으로 정렬하고자 했다.<br>그래서 작성한 코드는 아래와 같다.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Back_2750</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[]args)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> caseNum = sc.nextInt();</span><br><span class="line">        <span class="keyword">int</span>[] array = <span class="keyword">new</span> <span class="keyword">int</span>[caseNum];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;caseNum;i++)</span><br><span class="line">            array[i]=sc.nextInt();</span><br><span class="line"></span><br><span class="line">        solution(array);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;array.length;i++)</span><br><span class="line">            System.out.println(array[i]);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] array)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;array.length;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=i;j&lt;array.length;j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (array[i] &gt; array[j]) &#123;</span><br><span class="line">                    <span class="keyword">int</span> temp = array[i];</span><br><span class="line">                    array[i] = array[j];</span><br><span class="line">                    array[j] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>메모리는 16920KB 정도 차지했고<br>버블 정렬을 이용했다. </p>
+<h4 id="버블-정렬"><a href="#버블-정렬" class="headerlink" title="버블 정렬"></a>버블 정렬</h4><ul>
+<li><p>서로 인접한 두 원소를  검사하여 정렬하는 알고리즘.<br>ex)</p>
+<p>[ 5, 4, 3, 2, 1]  -&gt; 5와 4를  비교하고 큰 값을 오른쪽으로<br>[ 4, 5, 3, 2, 1] -&gt; 5,3 을 비교하고 큰 값을 오른쪽으로 </p>
+<p>[4, 3 ,5 ,2 , 1] -&gt; 5,2 비교 </p>
+<p>[4, 3 ,2 ,5, 1] -&gt; 5,1 비교 </p>
+<hr>
+<p>[4, 3, 2, 1, 5]  - &gt; 이렇게 배열의 크기만큼 한 번 돌고나면 가장 큰 수가 맨 오른쪽에 위치한다. </p>
+</li>
+</ul>
+<p>   그 다음 가장 큰 자리수를 제외한 </p>
+<p>   [4,3,2,1,5 ] -&gt; 5는 고정, 4~1 까지를 비교한다. 4,3 비교 </p>
+<p>   [3,4,2,1,5] -&gt; 5는 고정, 4,2 비교. </p>
+<p>   [3, 2, 4, 1, 5]-&gt; 5는 고정,4,1 비교 </p>
+<hr>
+<p>   [3, 2, 1, 4, 5 ]- &gt; 2번쨰로 큰 4자리 찾는다. </p>
+<p>   이렇게 총 4번, 3번, 2번,1번  교환이 이루어진다. </p>
+<p>   n-1,n-2,….,2,1 = n(n-1)/2</p>
+<p>   버블 정렬의 시간 복잡도 </p>
+<ul>
+<li><p>Best : N^2</p>
+</li>
+<li><p>Avg :  N^2</p>
+</li>
+<li><p>Worst :  N^2</p>
+</li>
+</ul>
+<p>   정렬이 되어있든 안 되었있든 모든 배열의 n-1만큼 탐색을 해야하기에<br>   Best, Avg, Worst 모두 동일하게  N^2 걸린다. </p>
+<p>   단순한만큼 비효율적인 방법이라고 한다. </p>
+<hr>
+<p>세상에나 내가 여태 짯던 알고리즘은 선택정렬이였어;;<br>멤붕. </p>
+<p>버블정렬 알고리즘은 아래와 같다. </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">buble_sort</span><span class="params">(<span class="keyword">int</span>[] array)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=array.length-<span class="number">1</span>;i&gt;<span class="number">0</span>;i--)&#123;</span><br><span class="line">       <span class="comment">//0~array.length-1 만큼 반복</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;i;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(array[j]&gt;array[j+<span class="number">1</span>])&#123;</span><br><span class="line">                <span class="keyword">int</span> temp= array[j];</span><br><span class="line">                array[j]= array[j+<span class="number">1</span>];</span><br><span class="line">                array[j+<span class="number">1</span>] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
                 
